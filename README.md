@@ -9,8 +9,8 @@
 | Ethernet | Intel I219-V |
 | Bluetooth | Asus BT-400 (Broadcom BCM20702) |
 
-**macOS version:** macOS Monterey 12.2.1  
-**OpenCore version:** 0.7.8  
+**macOS version:** macOS Monterey 12.3.1  
+**OpenCore version:** 0.7.9  
 **SMBIOS**: iMac 18,3
 
 ## Credits
