@@ -5,12 +5,12 @@
 | Motherboard | Gigabyte Z270-HD3P |
 | RAM | 32GB (4 x 8GB) Patriot Signature  @ 2400MHz |
 | GPU | Gigabyte Aourus RX580 8GB |
-| OS Disk | Gigabyte 120GB SSD |
+| OS Disk | Samsung 970 EVO 250GB |
 | Ethernet | Intel I219-V |
 | Bluetooth | Asus BT-400 (Broadcom BCM20702) |
 
-**macOS version:** macOS Monterey 12.3.1  
-**OpenCore version:** 0.7.9  
+**macOS version:** macOS Monterey 12.3.1 (21E258)
+**OpenCore version:** 0.8.0  
 **SMBIOS**: iMac 18,3
 
 ## Credits
