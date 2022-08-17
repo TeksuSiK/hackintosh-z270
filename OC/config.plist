@@ -883,28 +883,7 @@
 			<false/>
 		</dict>
 		<key>Tools</key>
-		<array>
-			<dict>
-				<key>Name</key>
-				<string>OpenShell.efi</string>
-				<key>Comment</key>
-				<string>OpenShell.efi</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>OpenShell.efi</string>
-				<key>Arguments</key>
-				<string></string>
-				<key>Auxiliary</key>
-				<true/>
-				<key>Flavour</key>
-				<string>Auto</string>
-				<key>RealPath</key>
-				<false/>
-				<key>TextMode</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 	<key>NVRAM</key>
 	<dict>
@@ -914,8 +893,6 @@
 			<dict>
 				<key>DefaultBackgroundColor</key>
 				<data>AAAAAA==</data>
-				<key>UIScale</key>
-				<data>AQ==</data>
 			</dict>
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
 			<dict>
@@ -954,8 +931,6 @@
 				<string>ForceDisplayRotationInEFI</string>
 			</array>
 		</dict>
-		<key>LegacyEnable</key>
-		<false/>
 		<key>LegacyOverwrite</key>
 		<false/>
 		<key>LegacySchema</key>
@@ -1107,6 +1082,8 @@
 				<string></string>
 				<key>Comment</key>
 				<string>HfsPlus.efi</string>
+				<key>LoadEarly</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Enabled</key>
@@ -1117,6 +1094,8 @@
 				<string></string>
 				<key>Comment</key>
 				<string>OpenRuntime.efi</string>
+				<key>LoadEarly</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>Enabled</key>
@@ -1127,16 +1106,8 @@
 				<string></string>
 				<key>Comment</key>
 				<string>OpenCanopy.efi</string>
-			</dict>
-			<dict>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>ResetNvramEntry.efi</string>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
-				<string>ResetNvramEntry.efi</string>
+				<key>LoadEarly</key>
+				<false/>
 			</dict>
 		</array>
 		<key>Input</key>
