@@ -26,6 +26,8 @@
  - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
  - [[Kext] IntelMausi](https://github.com/acidanthera/IntelMausi)
  - [[Kext] BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
+ - [[Kext] RadeonSensor](https://github.com/aluveitie/RadeonSensor)
+ - [[Kext] SMCRadeonGPU](https://github.com/aluveitie/RadeonSensor)
  - [[Tool] ProperTree](https://github.com/corpnewt/ProperTree)
  - [[Tool] GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) 
  - [[Tool] MountEFI](https://github.com/corpnewt/MountEFI) 
