@@ -9,8 +9,8 @@
 | Ethernet | Intel I219-V |
 | Bluetooth | Asus BT-400 (Broadcom BCM20702) |
 
-**macOS version:** macOS Monterey 12.4 (21F79)  
-**OpenCore version:** 0.8.1  
+**macOS version:** macOS Monterey 12.5 (21G72)  
+**OpenCore version:** 0.8.3  
 **SMBIOS**: iMac 18,3
 
 ## Credits
@@ -19,6 +19,7 @@
  - [[SSDT] SSDT-PLUG-DRTNIA](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-PLUG-DRTNIA.aml)
  - [[Driver] HFSPlus](https://github.com/acidanthera/OcBinaryData/blob/master/Drivers/HfsPlus.efi)
  - [[Driver] OpenRuntime](https://github.com/acidanthera/OpenCorePkg)
+ - [[Driver] OpenCanopy](https://github.com/acidanthera/OpenCorePkg)
  - [[Kext] Lilu](https://github.com/acidanthera/Lilu)
  - [[Kext] VirtualSMC](https://github.com/acidanthera/VirtualSMC)
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
@@ -27,4 +28,7 @@
  - [[Kext] BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
  - [[Tool] ProperTree](https://github.com/corpnewt/ProperTree)
  - [[Tool] GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) 
+ - [[Tool] MountEFI](https://github.com/corpnewt/MountEFI) 
+ - [[Tool] ocvalidate](https://github.com/acidanthera/OpenCorePkg) 
+ - [[Tool] OCConfigCompare](https://github.com/corpnewt/OCConfigCompare) 
  - [Dortania](https://dortania.github.io/) for config guides
