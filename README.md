@@ -9,8 +9,8 @@
 | Ethernet | Intel I219-V |
 | Bluetooth | Asus BT-400 (Broadcom BCM20702) |
 
-**macOS version:** macOS Monterey 12.5 (21G72)  
-**OpenCore version:** 0.8.3  
+**macOS version:** macOS Ventura 13.0 (22A380)  
+**OpenCore version:** 0.8.5  
 **SMBIOS**: iMac 18,3
 
 ## Credits
@@ -28,6 +28,8 @@
  - [[Kext] BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
  - [[Kext] RadeonSensor](https://github.com/aluveitie/RadeonSensor)
  - [[Kext] SMCRadeonGPU](https://github.com/aluveitie/RadeonSensor)
+ - [[Kext] USBToolBox](https://github.com/USBToolBox/kext)
+ - [[Kext] NVMeFix](https://github.com/acidanthera/NVMeFix)
  - [[Tool] ProperTree](https://github.com/corpnewt/ProperTree)
  - [[Tool] GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) 
  - [[Tool] MountEFI](https://github.com/corpnewt/MountEFI) 
