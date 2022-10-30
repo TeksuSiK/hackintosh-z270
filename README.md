@@ -15,6 +15,45 @@
 **OpenCore version:** 0.8.5  
 **SMBIOS**: iMac 18,3
 
+## Software compatibility
+ - Ventura (13.x)
+ - Monterey (12.x)
+ - Big Sur (11.x)
+ - Earlier versions alo should work but are not tested
+
+## Hardware compatibility
+### CPU
+The EFI is compatible with Intel Core Desktop Kaby Lake (7XXX) processors.
+
+### GPU
+Nvidia GPUs support is complicated and will not be discussed in this repository. 
+| **Component** | **Supported?** |
+| ------------- | --------- |
+| Integrated | No |
+| AMD | Yes<sup>1</sup> |
+| NVIDIA | Requires changes<sup>2</sup> |
+
+<sup>1</sup>Some of R7 and R9 GPUs requires spoofing. More info [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html).  
+<sup>2</sup>NVIDIA's GPU support is complicated. You can find more info [here](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#gpu-support) and [here](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html#pascal-series-gtx-10xx).
+
+### Motherboard
+All motherboard should be supported out of the box.
+
+### Storage
+For the most part, all SATA based drives are supported and the majority of NVMe drives as well. Updating storage firmware should fix any problems. Using Intel Optane Memory or micron 3D XPoint are unsupported in macOS.
+
+### Networking
+#### Wired
+Intel NICs (82578, 82579, I217, I218 and I219) are supported. To use other NICs you must use a different kexts.
+#### Wireless
+Broadcom cards are supported by BrcmPatchRAM. AirPort and other stuff will not work. For best support use supported chips from Apple hardware (ex. Fenvi T919)
+
+## Installation
+ 1. Use [this](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) guide to create USB with macOS recovery.
+ 2. Clone this repository and copy "BOOT" and "OC" directories to "EFI" directory on your USB.
+ 3. Modify "MLB", "ROM", "SystemSerialNumber" and "SystemUUID" in EFI/OC/config.plist using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) script with iMac18,3 SMBIOS. You can find more detailed instructions [here](https://dortania.github.io/OpenCore-Install-Guide/config.plist/kaby-lake.html#platforminfo).
+ 4. Follow [Dortania](https://dortania.github.io/OpenCore-Post-Install/) post-install guide.
+
 ## Credits
  - [[Bootloader] OpenCore](https://github.com/acidanthera/OpenCorePkg)
  - [[SSDT] SSDT-EC-USBX-DESKTOP](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/compiled/SSDT-EC-USBX-DESKTOP.aml)
