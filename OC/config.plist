@@ -239,6 +239,11 @@
 				<key>AAPL,ig-platform-id</key>
 				<data>AwASWQ==</data>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>shikigva</key>
+				<integer>128</integer>
+			</dict>
 		</dict>
 		<key>Delete</key>
 		<dict/>
@@ -247,24 +252,6 @@
 	<dict>
 		<key>Add</key>
 		<array>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>Lilu.kext</string>
-				<key>Comment</key>
-				<string>Lilu.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/Lilu</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
 			<dict>
 				<key>Arch</key>
 				<string>Any</string>
@@ -323,13 +310,13 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>NVMeFix.kext</string>
+				<string>Lilu.kext</string>
 				<key>Comment</key>
-				<string>NVMeFix.kext</string>
+				<string>Lilu.kext</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/NVMeFix</string>
+				<string>Contents/MacOS/Lilu</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -907,7 +894,7 @@
 			<key>IncreasePciBarSize</key>
 			<false/>
 			<key>LapicKernelPanic</key>
-			<false/>
+			<true/>
 			<key>LegacyCommpage</key>
 			<false/>
 			<key>PanicNoKextDump</key>
@@ -945,8 +932,10 @@
 			<integer>0</integer>
 			<key>HibernateMode</key>
 			<string>None</string>
-			<key>HideAuxiliary</key>
+			<key>HibernateSkipsPicker</key>
 			<false/>
+			<key>HideAuxiliary</key>
+			<true/>
 			<key>LauncherOption</key>
 			<string>Full</string>
 			<key>LauncherPath</key>
@@ -1070,7 +1059,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100 alcid=1 -lilubetaall</string>
+				<string>keepsyms=1 debug=0x100 alcid=1 unfairgva=1</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1197,6 +1186,12 @@
 			<integer>50</integer>
 			<key>KeySubsequentDelay</key>
 			<integer>5</integer>
+			<key>PointerDwellClickTimeout</key>
+			<integer>0</integer>
+			<key>PointerDwellDoubleClickTimeout</key>
+			<integer>0</integer>
+			<key>PointerDwellRadius</key>
+			<integer>0</integer>
 			<key>PointerPollMask</key>
 			<integer>-1</integer>
 			<key>PointerPollMax</key>
@@ -1241,6 +1236,18 @@
 				<key>Arguments</key>
 				<string></string>
 				<key>Comment</key>
+				<string>HfsPlus.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>LoadEarly</key>
+				<false/>
+				<key>Path</key>
+				<string>HfsPlus.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
 				<string>OpenCanopy.efi</string>
 				<key>Enabled</key>
 				<true/>
@@ -1265,13 +1272,13 @@
 				<key>Arguments</key>
 				<string></string>
 				<key>Comment</key>
-				<string>HfsPlus.efi</string>
+				<string>ResetNvramEntry.efi</string>
 				<key>Enabled</key>
 				<true/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
-				<string>HfsPlus.efi</string>
+				<string>ResetNvramEntry.efi</string>
 			</dict>
 		</array>
 		<key>Input</key>
@@ -1292,6 +1299,39 @@
 			<string>ASUS</string>
 			<key>TimerResolution</key>
 			<integer>50000</integer>
+		</dict>
+		<key>Output</key>
+		<dict>
+			<key>ClearScreenOnModeSwitch</key>
+			<false/>
+			<key>ConsoleMode</key>
+			<string></string>
+			<key>DirectGopRendering</key>
+			<false/>
+			<key>ForceResolution</key>
+			<false/>
+			<key>GopPassThrough</key>
+			<string>Disabled</string>
+			<key>IgnoreTextInGraphics</key>
+			<false/>
+			<key>ProvideConsoleGop</key>
+			<true/>
+			<key>ReconnectGraphicsOnConnect</key>
+			<false/>
+			<key>ReconnectOnResChange</key>
+			<false/>
+			<key>ReplaceTabWithSpace</key>
+			<false/>
+			<key>Resolution</key>
+			<string>Max</string>
+			<key>SanitiseClearScreen</key>
+			<false/>
+			<key>TextRenderer</key>
+			<string>BuiltinGraphics</string>
+			<key>UIScale</key>
+			<integer>0</integer>
+			<key>UgaPassThrough</key>
+			<false/>
 		</dict>
 		<key>ProtocolOverrides</key>
 		<dict>
@@ -1330,39 +1370,6 @@
 			<key>OSInfo</key>
 			<false/>
 			<key>UnicodeCollation</key>
-			<false/>
-		</dict>
-		<key>Output</key>
-		<dict>
-			<key>ClearScreenOnModeSwitch</key>
-			<false/>
-			<key>ConsoleMode</key>
-			<string></string>
-			<key>DirectGopRendering</key>
-			<false/>
-			<key>ForceResolution</key>
-			<false/>
-			<key>GopPassThrough</key>
-			<string>Disabled</string>
-			<key>IgnoreTextInGraphics</key>
-			<false/>
-			<key>ProvideConsoleGop</key>
-			<true/>
-			<key>ReconnectGraphicsOnConnect</key>
-			<false/>
-			<key>ReconnectOnResChange</key>
-			<false/>
-			<key>ReplaceTabWithSpace</key>
-			<false/>
-			<key>Resolution</key>
-			<string>Max</string>
-			<key>SanitiseClearScreen</key>
-			<false/>
-			<key>TextRenderer</key>
-			<string>BuiltinGraphics</string>
-			<key>UIScale</key>
-			<integer>0</integer>
-			<key>UgaPassThrough</key>
 			<false/>
 		</dict>
 		<key>Quirks</key>

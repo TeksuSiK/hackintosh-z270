@@ -11,8 +11,8 @@
 | Ethernet | Intel I219-V |
 | Bluetooth | Asus BT-400 (Broadcom BCM20702) |
 
-**macOS version:** macOS Ventura 13.0 (22A380)  
-**OpenCore version:** 0.8.5  
+**macOS version:** macOS Ventura 13.1 (22C65)  
+**OpenCore version:** 0.8.7  
 **SMBIOS**: iMac 18,3
 
 ## Software compatibility
