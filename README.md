@@ -5,11 +5,11 @@
 | ------------- | --------- |
 | CPU | Intel Core i5-7600K @ 3.8GHz to 4.6GHz |
 | Motherboard | Gigabyte Z270-HD3P |
-| RAM | 32GB (4 x 8GB) Patriot Signature  @ 2400MHz |
+| RAM | 32GB (4 x 8GB) Patriot Signature @ 2400MHz |
 | GPU | Gigabyte Aourus RX580 8GB |
 | OS Disk | Samsung 970 EVO 250GB |
 | Ethernet | Intel I219-V |
-| Bluetooth | Asus BT-400 (Broadcom BCM20702) |
+| WiFi & Bluetooth | Fenvi T919 |
 
 **macOS version:** macOS Ventura 13.1 (22C65)  
 **OpenCore version:** 0.8.7  
@@ -46,7 +46,7 @@ For the most part, all SATA based drives are supported and the majority of NVMe 
 #### Wired
 Intel NICs (82578, 82579, I217, I218 and I219) are supported. To use other NICs you must use a different kexts.
 #### Wireless
-Broadcom cards are supported by BrcmPatchRAM. AirPort and other stuff will not work. For best support use supported chips from Apple hardware (ex. Fenvi T919)
+Fenvi T919 wireless card works out of the box without any kexts and supports features like AirDrop, Continuity etc.
 
 ## Installation
  1. Use [this](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) guide to create USB with macOS recovery.
