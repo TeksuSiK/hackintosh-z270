@@ -238,6 +238,15 @@
 			<dict>
 				<key>AAPL,ig-platform-id</key>
 				<data>AwASWQ==</data>
+				<key>AAPL,slot-name</key>
+				<string>built-in</string>
+				<key>enable-metal</key>
+				<data>AQAAAA==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1,0x0)/Pci(0x0,0x0)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,1,0/0,0</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
