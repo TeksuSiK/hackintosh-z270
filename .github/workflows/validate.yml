@@ -1,0 +1,16 @@
+name: Validate config.plist with ocvalidate
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - '**.md'
+jobs:
+  validate:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: brokeyourbike/ocvalidate-action@v0.3
+        with:
+          opencore-version: '0.8.8'
+          release: true
+      - run: ocvalidate OC/config.plist | grep -q 'No issues found'
