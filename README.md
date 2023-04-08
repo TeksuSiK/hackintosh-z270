@@ -37,7 +37,7 @@ Nvidia GPUs support is complicated and will not be discussed in this repository.
 <sup>2</sup>NVIDIA's GPU support is complicated. You can find more info [here](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#gpu-support) and [here](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html#pascal-series-gtx-10xx).
 
 ### Motherboard
-All motherboard should be supported out of the box.
+All motherboards should be supported out of the box.
 
 ### Storage
 For the most part, all SATA based drives are supported and the majority of NVMe drives as well. Updating storage firmware should fix any problems. Using Intel Optane Memory or micron 3D XPoint are unsupported in macOS.
