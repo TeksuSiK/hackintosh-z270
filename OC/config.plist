@@ -1240,18 +1240,6 @@
 				<key>Arguments</key>
 				<string></string>
 				<key>Comment</key>
-				<string>ResetNvramEntry.efi</string>
-				<key>Enabled</key>
-				<true/>
-				<key>LoadEarly</key>
-				<false/>
-				<key>Path</key>
-				<string>ResetNvramEntry.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
 				<string>AudioDxe.efi</string>
 				<key>Enabled</key>
 				<true/>
@@ -1289,6 +1277,8 @@
 			<key>DirectGopRendering</key>
 			<false/>
 			<key>ForceResolution</key>
+			<false/>
+			<key>GopBurstMode</key>
 			<false/>
 			<key>GopPassThrough</key>
 			<string>Disabled</string>
