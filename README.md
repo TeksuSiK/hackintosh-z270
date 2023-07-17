@@ -11,8 +11,8 @@
 | Ethernet | Intel I219-V |
 | WiFi & Bluetooth | Fenvi T919 |
 
-**macOS version:** macOS Ventura 13.3.1 (22E261)  
-**OpenCore version:** 0.9.1  
+**macOS version:** macOS Ventura 13.4.1 (22F82)  
+**OpenCore version:** 0.9.3  
 **SMBIOS**: iMac 18,3
 
 ## Software compatibility
@@ -66,8 +66,8 @@ Fenvi T919 wireless card works out of the box without any kexts and supports fea
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
  - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
  - [[Kext] IntelMausi](https://github.com/acidanthera/IntelMausi)
- - [[Kext] RadeonSensor](https://github.com/aluveitie/RadeonSensor)
- - [[Kext] SMCRadeonGPU](https://github.com/aluveitie/RadeonSensor)
+ - [[Kext] RadeonSensor](https://github.com/NootInc/RadeonSensor)
+ - [[Kext] SMCRadeonGPU](https://github.com/NootInc/RadeonSensor)
  - [[Kext] USBToolBox](https://github.com/USBToolBox/kext)
  - [[Kext] FeatureUnlock](https://github.com/acidanthera/FeatureUnlock)
  - [[Tool] ProperTree](https://github.com/corpnewt/ProperTree)
