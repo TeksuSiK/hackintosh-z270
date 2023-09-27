@@ -11,11 +11,12 @@
 | Ethernet | Intel I219-V |
 | WiFi & Bluetooth | Fenvi T919 |
 
-**macOS version:** macOS Ventura 13.6 (22G120)  
+**macOS version:** macOS Sonoma 14.0 (23A344)  
 **OpenCore version:** 0.9.5  
-**SMBIOS**: iMac 18,3
+**SMBIOS**: iMac 19,1
 
 ## Software compatibility
+ - Sonoma (14.x)
  - Ventura (13.x)
  - Monterey (12.x)
  - Big Sur (11.x)
@@ -46,12 +47,12 @@ For the most part, all SATA based drives are supported and the majority of NVMe 
 #### Wired
 Intel NICs (82578, 82579, I217, I218 and I219) are supported. To use other NICs you must use a different kexts.
 #### Wireless
-Fenvi T919 wireless card works out of the box without any kexts and supports features like AirDrop, Continuity etc.
+After macOS Sonoma update Broadcom WiFi is dead, beacause Apple dropped required kexts. However Bluetooth still works fine.
 
 ## Installation
  1. Use [this](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) guide to create USB with macOS recovery.
  2. Clone this repository and copy "BOOT" and "OC" directories to "EFI" directory on your USB.
- 3. Modify "MLB", "ROM", "SystemSerialNumber" and "SystemUUID" in EFI/OC/config.plist using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) script with iMac18,3 SMBIOS. You can find more detailed instructions [here](https://dortania.github.io/OpenCore-Install-Guide/config.plist/kaby-lake.html#platforminfo).
+ 3. Modify "MLB", "ROM", "SystemSerialNumber" and "SystemUUID" in EFI/OC/config.plist using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) script with iMac19,1 SMBIOS. You can find more detailed instructions [here](https://dortania.github.io/OpenCore-Install-Guide/config.plist/kaby-lake.html#platforminfo).
  4. Follow [Dortania](https://dortania.github.io/OpenCore-Post-Install/) post-install guide.
 
 ## Credits
