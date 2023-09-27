@@ -11,8 +11,8 @@
 | Ethernet | Intel I219-V |
 | WiFi & Bluetooth | Fenvi T919 |
 
-**macOS version:** macOS Ventura 13.4.1 (22F82)  
-**OpenCore version:** 0.9.3  
+**macOS version:** macOS Ventura 13.6 (22G120)  
+**OpenCore version:** 0.9.5  
 **SMBIOS**: iMac 18,3
 
 ## Software compatibility
