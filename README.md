@@ -11,7 +11,7 @@
 | Ethernet | Intel I219-V |
 | WiFi & Bluetooth | Fenvi T919 |
 
-**macOS version:** macOS Sonoma 14.0 (23A344)  
+**macOS version:** macOS Sonoma 14.3 (23D56)  
 **OpenCore version:** 0.9.7  
 **SMBIOS**: iMac 19,1
 
