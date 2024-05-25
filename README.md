@@ -11,11 +11,12 @@
 | Ethernet | Intel I219-V |
 | WiFi & Bluetooth | Fenvi T919 |
 
-**macOS version:** macOS Ventura 13.6.6 (22G630)  
-**OpenCore version:** 0.9.9  
-**SMBIOS**: iMac 18,3
+**macOS version:** macOS Sonoma 14.4.1 (23E224)  
+**OpenCore version:** 0.9.9 + OCLP   
+**SMBIOS**: iMac 19,1  
 
 ## Software compatibility
+ - Sonoma (14.x)
  - Ventura (13.x)
  - Monterey (12.x)
  - Big Sur (11.x)
@@ -29,12 +30,13 @@ The EFI is compatible with Intel Core Desktop Kaby Lake (7XXX) processors.
 Nvidia GPUs support is complicated and will not be discussed in this repository. 
 | **Component** | **Supported?** |
 | ------------- | --------- |
-| Integrated | No |
-| AMD | Yes<sup>1</sup> |
-| NVIDIA | Requires changes<sup>2</sup> |
+| Integrated | Requires changes<sup>1</sup> |
+| AMD | Yes<sup>2</sup> |
+| NVIDIA | Requires changes<sup>3</sup> |
 
-<sup>1</sup>Some of R7 and R9 GPUs requires spoofing. More info [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html).  
-<sup>2</sup>NVIDIA's GPU support is complicated. You can find more info [here](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#gpu-support) and [here](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html#pascal-series-gtx-10xx).
+<sup>1</sup>Modifications to SMBIOS and DeviceProperties will be required. Propably some framebuffer patches also should be applied.  
+<sup>2</sup>Some of R7 and R9 GPUs requires spoofing. More info [here](https://dortania.github.io/Getting-Started-With-ACPI/Universal/spoof.html).  
+<sup>3</sup>NVIDIA's GPU support is complicated. You can find more info [here](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#gpu-support) and [here](https://dortania.github.io/GPU-Buyers-Guide/modern-gpus/nvidia-gpu.html#pascal-series-gtx-10xx).
 
 ### Motherboard
 All motherboards should be supported out of the box.
@@ -46,12 +48,15 @@ For the most part, all SATA based drives are supported and the majority of NVMe 
 #### Wired
 Intel NICs (82578, 82579, I217, I218 and I219) are supported. To use other NICs you must use a different kexts.
 #### Wireless
-Fenvi T919 wireless card works out of the box without any kexts and supports features like AirDrop, Continuity etc.
+Fenvi T919 wireless card works on Somona after applying OCLP root patches and supports features like AirDrop, Continuity, etc. Before Sonoma, it works out of the box.
+
+## Security
+This build has security features such as Secure Boot, System Integrity Protection, and Apple Mobile File Integrity disabled due to the application of OpenCore Legacy Patcher patches. FileVault is also unavailable.  
 
 ## Installation
  1. Use [this](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) guide to create USB with macOS recovery.
  2. Clone this repository and copy "BOOT" and "OC" directories to "EFI" directory on your USB.
- 3. Modify "MLB", "ROM", "SystemSerialNumber" and "SystemUUID" in EFI/OC/config.plist using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) script with iMac18,3 SMBIOS. You can find more detailed instructions [here](https://dortania.github.io/OpenCore-Install-Guide/config.plist/kaby-lake.html#platforminfo).
+ 3. Modify "MLB", "ROM", "SystemSerialNumber" and "SystemUUID" in EFI/OC/config.plist using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) script with iMac19,1 SMBIOS. You can find more detailed instructions [here](https://dortania.github.io/OpenCore-Install-Guide/config.plist/kaby-lake.html#platforminfo).
  4. Follow [Dortania](https://dortania.github.io/OpenCore-Post-Install/) post-install guide.
 
 ## Credits
@@ -70,6 +75,8 @@ Fenvi T919 wireless card works out of the box without any kexts and supports fea
  - [[Kext] SMCRadeonGPU](https://github.com/NootInc/RadeonSensor)
  - [[Kext] USBToolBox](https://github.com/USBToolBox/kext)
  - [[Kext] FeatureUnlock](https://github.com/acidanthera/FeatureUnlock)
+ - [[Kext] IOSkywalk](https://github.com/dortania/OpenCore-Legacy-Patcher/tree/main/payloads/Kexts/Wifi)
+ - [[Kext] IO80211FamilyLegacy](https://github.com/dortania/OpenCore-Legacy-Patcher/tree/main/payloads/Kexts/Wifi)
  - [[Tool] ProperTree](https://github.com/corpnewt/ProperTree)
  - [[Tool] GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) 
  - [[Tool] MountEFI](https://github.com/corpnewt/MountEFI) 
