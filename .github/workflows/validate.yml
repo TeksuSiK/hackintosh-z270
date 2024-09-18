@@ -11,6 +11,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: brokeyourbike/ocvalidate-action@v0.3
         with:
-          opencore-version: '0.9.9'
+          opencore-version: '1.0.1'
           release: true
       - run: ocvalidate OC/config.plist | grep -q 'No issues found'
