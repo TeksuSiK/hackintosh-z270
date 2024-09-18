@@ -11,11 +11,12 @@
 | Ethernet | Intel I219-V |
 | WiFi & Bluetooth | Fenvi T919 |
 
-**macOS version:** macOS Sonoma 14.4.1 (23E224)  
-**OpenCore version:** 0.9.9 + OCLP   
-**SMBIOS**: iMac 19,1  
+**macOS version:** macOS Sequoia 15.0 (24A335)  
+**OpenCore version:** 1.0.1 + OCLP   
+**SMBIOS**: iMac19,1  
 
 ## Software compatibility
+ - Sequoia (15.x)
  - Sonoma (14.x)
  - Ventura (13.x)
  - Monterey (12.x)
@@ -71,8 +72,7 @@ This build has security features such as Secure Boot, System Integrity Protectio
  - [[Kext] WhateverGreen](https://github.com/acidanthera/WhateverGreen)
  - [[Kext] AppleALC](https://github.com/acidanthera/AppleALC)
  - [[Kext] IntelMausi](https://github.com/acidanthera/IntelMausi)
- - [[Kext] RadeonSensor](https://github.com/NootInc/RadeonSensor)
- - [[Kext] SMCRadeonGPU](https://github.com/NootInc/RadeonSensor)
+ - [[Kext] SMCRadeonSensors](https://github.com/ChefKissInc/SMCRadeonSensors)
  - [[Kext] USBToolBox](https://github.com/USBToolBox/kext)
  - [[Kext] FeatureUnlock](https://github.com/acidanthera/FeatureUnlock)
  - [[Kext] IOSkywalk](https://github.com/dortania/OpenCore-Legacy-Patcher/tree/main/payloads/Kexts/Wifi)
