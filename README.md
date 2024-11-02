@@ -7,11 +7,11 @@
 | Motherboard | Gigabyte Z270-HD3P |
 | RAM | 32GB (4 x 8GB) Patriot Signature @ 2400MHz |
 | GPU | Gigabyte Aourus RX580 8GB |
-| OS Disk | Samsung 970 EVO 250GB |
+| OS Disk | Crucial P5 Plus 500GB |
 | Ethernet | Intel I219-V |
 | WiFi & Bluetooth | Fenvi T919 |
 
-**macOS version:** macOS Sequoia 15.0 (24A335)  
+**macOS version:** macOS Sequoia 15.1 (24B83)  
 **OpenCore version:** 1.0.1 + OCLP   
 **SMBIOS**: iMac19,1  
 
