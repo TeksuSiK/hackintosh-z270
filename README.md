@@ -1,3 +1,5 @@
+# This repository is now archived as I no longer use this hardware
+
 ![Screenshot](screenshot.png)
 
 ## Specification
